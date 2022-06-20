@@ -1,0 +1,16 @@
+@import 'variables';
+
+.section-header__container {
+    padding-top: 38.5px;
+    padding-bottom: 38.5px;
+    background-color: $colorHeader;
+    margin-bottom: $bottomMargin
+}
+
+.popup {
+    padding: 8px 15px;
+    background-color: $colorPopUp;
+    border-color: transparent;
+    @include fontPopUp;
+    color: $colorWhite;
+}

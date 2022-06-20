@@ -1,0 +1,7 @@
+@import 'variables';
+@import 'mixin';
+
+.section-footer__container {
+    background-color: $colorFooter;
+    padding: 50px 0px 50px;
+}

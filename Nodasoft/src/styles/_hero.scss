@@ -1,0 +1,106 @@
+@import 'variables';
+@import 'mixin';
+
+.section-hero__container {
+    background-color: $colorHero;
+    margin-bottom: $bottomMargin
+}
+
+.section-hero__group {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: grid;
+    grid-template-columns: minmax(90px,390px) minmax(147.5px,590px) minmax(40px,160px);
+    grid-template-rows: repeat(2,198px);
+    gap: $gridGap;
+}
+
+.section-hero__item:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.section-hero__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $colorWhite;
+    background-color: $colorHeroItem;
+    @include fontHeroItem;
+}
+
+.popupwindow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    top:0;
+    left:0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    position: relative;
+    background-color: $colorWhite;
+    color: $colorBlack;
+    padding: 169px 117px;
+    @include fontHeroItem;
+}
+
+.popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: $colorFooter;
+    padding: 15px 15px;
+    
+}
+
+.popup__close::after {
+    content: "";
+    position: absolute;
+    transform: rotate(55deg);
+    top: 13px;
+    right: 5px;
+    width: 19px;
+    height: 2px;
+    background-color: $colorWhite;
+}
+
+.popup__close::before {
+    content: "";
+    position: absolute;
+    transform: rotate(-55deg);
+    top: 13px;
+    right: 5px;
+    width: 19px;
+    height: 2px;
+    background-color: $colorWhite;
+}
+
+.popupwindow:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popupoutside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+

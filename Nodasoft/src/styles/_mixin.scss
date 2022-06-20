@@ -1,0 +1,22 @@
+@mixin containerStyle {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1170px;
+}
+
+@mixin fontPopUp {
+    font: {
+        family: 'Roboto';
+        size: 20px;
+        weight: 400;
+    }
+}
+
+
+@mixin fontHeroItem {
+    font: {
+        family: 'Roboto';
+        size: 53px;
+        weight: 400;
+    }
+}
